@@ -9,10 +9,7 @@
         
     ],
     "routes":[
-        {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
+        
         {
             "src": "/(.*)",
             "dest": "to_do_list/wsgi.py"
