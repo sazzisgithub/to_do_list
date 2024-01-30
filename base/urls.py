@@ -1,7 +1,10 @@
 from django.urls import path
 from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage, TaskReorder
-# 
 from django.contrib.auth.views import LogoutView
+
+from django.conf import settings    #new
+from django.conf.urls.static import static #new
+
 
 urlpatterns = [
     path('login/', CustomLoginView.as_view(), name='login'),
@@ -16,3 +19,4 @@ urlpatterns = [
     path('task-reorder/', TaskReorder.as_view(), name='task-reorder'),
 ]
 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) #new
