@@ -20,7 +20,7 @@
             "dest": "/static/$1"
         },
         {
-            "src": "/(.*)",
+            "src": "/to_do_list/(.*)",
             "dest": "to_do_list/wsgi.py"
         }
     ]
